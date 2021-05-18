@@ -2636,7 +2636,6 @@ input, select, textarea {
 			display: block;
 			margin: 4rem 0;
 			width: 100%;
-			margin-left: 475px;
 		}
 
 			.image.main:first-child {
@@ -2644,22 +2643,7 @@ input, select, textarea {
 			}
 
 			.image.main img {
-				width: 25%;
-				length: 25%
-			}
-
-		.image.port {
-			display: block;
-			margin: 4rem 0;
-			width: 100%;
-		}
-
-			.image.port:first-child {
-				margin-top: 0;
-			}
-
-			.image.port img {
-				width: 100%
+				width: 100%;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -2947,7 +2931,7 @@ input, select, textarea {
 
 		header > h2 + p {
 			font-size: 1rem;
-			margin-top: -0.25rem;
+			margin-top: -0.75rem;
 		}
 
 		header > h3 + p {
@@ -3402,11 +3386,6 @@ input, select, textarea {
 				}
 
 		#intro h1 {
-			font-size: 3rem;
-			line-height: 1;
-		}
-
-		#intro h2 {
 			font-size: 5rem;
 			line-height: 1;
 		}
@@ -3791,10 +3770,6 @@ input, select, textarea {
 			margin: 0;
 		}
 
-		#main > a {
-			font-size: 3rem
-		}
-
 			#main > *:first-child {
 				border-top: 0;
 			}
@@ -3812,7 +3787,7 @@ input, select, textarea {
 			}
 
 			#main > .post header.major > h1, #main > .post header.major h2 {
-				font-size: 3rem;
+				font-size: 4rem;
 				line-height: 1.1;
 				margin: 0 0 2rem 0;
 			}
