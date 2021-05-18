@@ -2634,9 +2634,9 @@ input, select, textarea {
 
 		.image.main {
 			display: flex;
-			margin: 4rem 0;
+			margin: 2rem 0;
 			width: 100%;
-			margin-left: 475px;
+			margin-left: 450px;
 		}
 
 			.image.main:first-child {
