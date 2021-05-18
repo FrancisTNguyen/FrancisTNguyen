@@ -2568,6 +2568,7 @@ input, select, textarea {
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
+			font-size: 3rem;
 		}
 
 		.icon > .label {
@@ -2839,7 +2840,7 @@ input, select, textarea {
 				display: inline-block;
 				text-align: center;
 				border-radius: 100%;
-				font-size: 1.25rem;
+				font-size: 2rem;
 			}
 
 		ul.icons.alt li .icon:before {
@@ -3298,7 +3299,6 @@ input, select, textarea {
 		}
 
 /* Intro */
-
 	#intro {
 		color: #ffffff;
 		padding: 8rem 4rem 6rem 4rem ;
@@ -3326,7 +3326,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 50vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
