@@ -2633,7 +2633,7 @@ input, select, textarea {
 			}
 
 		.image.main {
-			display: block;
+			display: flex;
 			margin: 4rem 0;
 			width: 100%;
 			margin-left: 475px;
@@ -3402,7 +3402,7 @@ input, select, textarea {
 				}
 
 		#intro h1 {
-			font-size: 1rem;
+			font-size: 3rem;
 			line-height: 1;
 		}
 
