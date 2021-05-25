@@ -2634,10 +2634,10 @@ input, select, textarea {
 			}
 
 		.image.main {
-			display: flex;
+			display: block;
 			margin: 2rem 0;
 			width: 100%;
-			margin-left: 450px;
+			margin-left: 300px;
 		}
 
 			.image.main:first-child {
@@ -2645,8 +2645,7 @@ input, select, textarea {
 			}
 
 			.image.main img {
-				width: 25%;
-				length: 25%
+				width: 30%;
 			}
 
 		.image.port {
