@@ -4721,3 +4721,8 @@ input, select, textarea {
 	display:flex;
 	flex-direction:row;
 }
+
+.video-container3{
+	display:flex;
+	flex-direction:row;
+}
