@@ -43,27 +43,113 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2><a >Battleground Mars</a></h2>
+									<h2><a >Battleground Mars(Refactor Games)</a></h2>
 								</header>
 								<div class="video-container">
 									<div>
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/Kh7vEFZpjAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/ovmWhMTxfOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
-									<div>
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/SU9lP1xYZMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe width="760" height="515" src="https://www.youtube.com/embed/ovmWhMTxfOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
 								</div>
-								<p>This is a multiplayer shooter game that I worked on at Refactor Games! As a gameplay engineer and level designer, I worked on many features such as programming the muzzle flash particle system and designing our Conquest level.
-									While I wasn't the one that created the initial design for the map, I've made many improvements to it such as creating better visual language by highlighting points of interest with the landscape painting tool! I've also
-									included an extra layer to the level by introducing a tunnel that players can take to get from one point to another. Finally, one of the last things that I did for this project was to update our landscape with meshes that would
-									improve immersion.
-								</p>
+								<!-- Slideshow container -->
+								<div class="slideshow-container">
+
+								  <!-- Full-width images with number and caption text -->
+								  <div class="mySlides fade">
+								    <div class="numbertext">1 / 6</div>
+								    <img src="images/BGM1.png" style="width:100%">
+								    <div class="text">Battle Pit Capture Point</div>
+								  </div>
+
+								  <div class="mySlides fade">
+								    <div class="numbertext">2 / 6</div>
+								    <img src="images/BGM2.png" style="width:100%">
+								    <div class="text">Storage Room with Lighting</div>
+								  </div>
+
+								  <div class="mySlides fade">
+								    <div class="numbertext">3 / 6</div>
+								    <img src="images/BGM3.png" style="width:100%">
+								    <div class="text">Battlefield Overlook Capture Point</div>
+								  </div>
+
+									<div class="mySlides fade">
+								    <div class="numbertext">4 / 6</div>
+								    <img src="images/BGM4.png" style="width:100%">
+								    <div class="text">Crashed Ship Capture Point</div>
+								  </div>
+
+									<div class="mySlides fade">
+								    <div class="numbertext">5 / 6</div>
+								    <img src="images/BGM5.png" style="width:100%">
+								    <div class="text">Defunct Tunnel Barricade</div>
+								  </div>
+
+									<div class="mySlides fade">
+								    <div class="numbertext">6 / 6</div>
+								    <img src="images/BGM6.png" style="width:100%">
+								    <div class="text">Defunct Tunnel</div>
+								  </div>
+
+								  <!-- Next and previous buttons -->
+								  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+								  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+								</div>
+								<br>
+
+								<!-- The dots/circles -->
+								<div style="text-align:center">
+								  <span class="dot" onclick="currentSlide(1)"></span>
+								  <span class="dot" onclick="currentSlide(2)"></span>
+								  <span class="dot" onclick="currentSlide(3)"></span>
+									<span class="dot" onclick="currentSlide(4)"></span>
+									<span class="dot" onclick="currentSlide(5)"></span>
+									<span class="dot" onclick="currentSlide(6)"></span>
+								</div>
+								<script>
+								let slideIndex = 1;
+								showSlides(slideIndex);
+
+								// Next/previous controls
+								function plusSlides(n) {
+								  showSlides(slideIndex += n);
+								}
+
+								// Thumbnail image controls
+								function currentSlide(n) {
+								  showSlides(slideIndex = n);
+								}
+
+								function showSlides(n) {
+								  let i;
+								  let slides = document.getElementsByClassName("mySlides");
+								  let dots = document.getElementsByClassName("dot");
+								  if (n > slides.length) {slideIndex = 1}
+								  if (n < 1) {slideIndex = slides.length}
+								  for (i = 0; i < slides.length; i++) {
+								    slides[i].style.display = "none";
+								  }
+								  for (i = 0; i < dots.length; i++) {
+								    dots[i].className = dots[i].className.replace(" active", "");
+								  }
+								  slides[slideIndex-1].style.display = "block";
+								  dots[slideIndex-1].className += " active";
+								}
+								</script>
+
+								<h4> Responsibilities </h4>
+								<ul>
+								  <li>Own the level design revamp process for the "Conquest" level on a dystopian Sci-Fi First Person Shooter</li>
+									<li>Repurposed building structure and canyon assets using Blender and importing them into the engine</li>
+									<li>Coordinated with lead and director in the level design process and provide feedback based off of playtests</li>
+									<li>Ensured game performance is not compromised by instancing meshes and removing unnecessary assets</li>
+								  <li>Created  and networked UE4 blueprint scripts to attach VFX assets like muzzle flashes/smoke</li>
+								  <li>Assist in prototyping and networking game features with lead and associate engineer</li>
+								</ul>
 							</article>
 
 							<article class="post featured">
 								<header class="major">
-									<h2><a >Trove</a></h2>
+									<h2><a >Trove(Refactor Games)</a></h2>
 								</header>
 								<div class="video-container2">
 									<div>
@@ -82,11 +168,18 @@
 									</div>
 								</div>
 								<a  class="image fit"><img src="images/CityConceptArt.png" alt="" /></a>
-								<p>This is a MOBA-style Pirate exploration game that I worked on at Refactor Games! As a gameplay engineer, I worked on many features such as exploding barrels and destructible meshes with a health component! I also helped debug many features that was core to our gameplay
-									such as player combat/movement. As a level designer, I was tasked with prototyping islands with different themes to test our gameplay features like traps and puzzles. I was also in charge of creating an early blockout of our "hub city" based off of concept art that I was provided.
-									I focused on making the blockout very similar to the concept art, but made necessary changes when feedback came in from our playtests. I also made my own small additions to the level to provide better spaces for player interactions. As a designer I helped design some of our monsters and classes like our Tiki Club
-									monster, Toador (a dungeon boss), and a support kit. While I didn't get the chance to engineer these features, I did give instructions to our art team on their behaviors. The documents are provided below:
-								</p>
+
+								<h4> Responsibilities </h4>
+								<ul>
+								  <li>Own the level design process for a pirate exploration game, inspired by MOBAs like LoL and Battlerite</li>
+									<li>Blocked out "City Hub" level to test flow and made adjustments to provide better spaces for player interactions</li>
+									<li>Designed "islands" with varying sizes and themes, mostly revolved around individual traps and puzzles</li>
+									<li>Designed Enemy Mobs and coordinated with overseas animation team on how to animate behaviors/attacks</li>
+									<li>Designed a Prototype Support Kit for a potential support class and gave feedback on other potential classes</li>
+								  <li>Assist in ability design of dungeon boss "Toador" and its level with lead and associate engineer</li>
+									<li>Prototyped and networked various features like traps, puzzles, and destructible mesh with hp via UE4 Blueprint </li>
+									<li>Project managed for VFX art team by setting up Trello, assigning tasks, and coordinating with overseas art team </li>
+								</ul>
 								<ul class="actions special">
 									<li><a href="https://docs.google.com/document/d/1k5MLSIwtnYVhGXwspngxc6vqhrn13NHg0Bz3zSR979Y/edit?usp=sharing" class="button large">Toador Design Doc</a></li>
 									<li><a href="https://docs.google.com/document/d/1uMp232nwq63hexPqOFmgLStzPzaYO52vCYrItF7Pk58/edit?usp=sharing" class="button large">Tiki Ambushers Design Doc</a></li>
