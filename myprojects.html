@@ -50,7 +50,7 @@
 									</div>
 								</div>
 								<!-- Slideshow container -->
-								<div class="slideshow-container">
+								<div class="slideshow-container" id="slideOne">
 
 								  <!-- Full-width images with number and caption text -->
 								  <div class="mySlides fade">
@@ -155,10 +155,6 @@
 										<iframe width="450" height="315" src="https://www.youtube.com/embed/21huGRNYrrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										<iframe width="450" height="315" src="https://www.youtube.com/embed/nuhUAlyoRsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
-									<div>
-										<iframe width="450" height="315" src="https://www.youtube.com/embed/L73qZsoJuqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-										<iframe width="450" height="315" src="https://www.youtube.com/embed/FkKCeVEaFyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
 								</div>
 								<div class="video-container3">
 									<div>
@@ -166,7 +162,116 @@
 										<iframe width="450" height="315" src="https://www.youtube.com/embed/91px-GTkmLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
 								</div>
-								<a  class="image fit"><img src="images/CityConceptArt.png" alt="" /></a>
+
+								<!-- Slideshow container -->
+								<div class="slideshow-container" id="slideTwo">
+
+									<!-- Full-width images with number and caption text -->
+									<div class="mySlides fade">
+										<div class="numbertext">1 / 10</div>
+										<img src="images/CityConceptArt.PNG" style="width:100%">
+										<div class="text">Concept Art to Block Out for Town Hub</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">2 / 10</div>
+										<img src="images/Tri-Island 1.PNG" style="width:100%">
+										<div class="text">Tri-Island: Collect 3 torches to open the door!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">3 / 10</div>
+										<img src="images/Tri-Island 2.PNG" style="width:100%">
+										<div class="text">Tri-Island: Collect 3 torches to open the door!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">4 / 10</div>
+										<img src="images/Tri-Island 3.PNG" style="width:100%">
+										<div class="text">Tri-Island: Collect 3 torches to open the door!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">5 / 10</div>
+										<img src="images/Toador Island 1.PNG" style="width:100%">
+										<div class="text">Toador Island: Run through the temple to defeat the island boss!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">6 / 10</div>
+										<img src="images/Toador Island 2.PNG" style="width:100%">
+										<div class="text">Toador Island: Run through the temple to defeat the island boss!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">7 / 10</div>
+										<img src="images/Toador Island 3.PNG" style="width:100%">
+										<div class="text">Toador Island: Run through the temple to defeat the island boss!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">8 / 10</div>
+										<img src="images/Teleport Island 1.PNG" style="width:100%">
+										<div class="text">Teleport Island: Find the correct room via teleporters to obtain your treasure!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">9 / 10</div>
+										<img src="images/Teleport Island 2.PNG" style="width:100%">
+										<div class="text">Teleport Island: Find the correct room via teleporters to obtain your treasure!</div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">10 / 10</div>
+										<img src="images/Teleport Island 3.PNG" style="width:100%">
+										<div class="text">Teleport Island: Find the correct room via teleporters to obtain your treasure!</div>
+									</div>
+
+									<!-- Next and previous buttons -->
+									<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+									<a class="next" onclick="plusSlides(1)">&#10095;</a>
+								</div>
+								<br>
+
+								<!-- The dots/circles -->
+								<div style="text-align:center">
+									<span class="dot" onclick="currentSlide(1)"></span>
+									<span class="dot" onclick="currentSlide(2)"></span>
+									<span class="dot" onclick="currentSlide(3)"></span>
+									<span class="dot" onclick="currentSlide(4)"></span>
+									<span class="dot" onclick="currentSlide(5)"></span>
+									<span class="dot" onclick="currentSlide(6)"></span>
+								</div>
+								<script>
+								let slideIndex = 1;
+								showSlides(slideIndex);
+
+								// Next/previous controls
+								function plusSlides(n) {
+									showSlides(slideIndex += n);
+								}
+
+								// Thumbnail image controls
+								function currentSlide(n) {
+									showSlides(slideIndex = n);
+								}
+
+								function showSlides(n) {
+									let i;
+									let slides = document.getElementsByClassName("mySlides");
+									let dots = document.getElementsByClassName("dot");
+									if (n > slides.length) {slideIndex = 1}
+									if (n < 1) {slideIndex = slides.length}
+									for (i = 0; i < slides.length; i++) {
+										slides[i].style.display = "none";
+									}
+									for (i = 0; i < dots.length; i++) {
+										dots[i].className = dots[i].className.replace(" active", "");
+									}
+									slides[slideIndex-1].style.display = "block";
+									dots[slideIndex-1].className += " active";
+								}
+								</script>
 
 								<h4> Responsibilities </h4>
 								<ul>
